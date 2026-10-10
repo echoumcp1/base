@@ -149,7 +149,7 @@ end = struct
 
   let ctz x = (Int64.ctz (unwrap x) |> wrap_modulo) [@nontail]
   let floor_pow2 x = globalize (wrap_exn (Int64.floor_pow2 (unwrap x))) [@nontail]
-  let ceil_pow2 x = globalize (wrap_exn (Int64.floor_pow2 (unwrap x))) [@nontail]
+  let ceil_pow2 x = globalize (wrap_exn (Int64.ceil_pow2 (unwrap x))) [@nontail]
   let floor_log2 x = Int64.floor_log2 (unwrap x) |> wrap_modulo
   let ceil_log2 x = Int64.ceil_log2 (unwrap x) |> wrap_modulo
 end
